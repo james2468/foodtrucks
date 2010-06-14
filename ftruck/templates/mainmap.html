@@ -1,0 +1,31 @@
+<html>
+<head>
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script type="text/javascript">
+  function initialize() {
+    var latlng = new google.maps.LatLng(38.90, -77.03);
+    var myOptions = {
+      zoom: 14,
+      center: latlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+    var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
+
+    // add a marker
+    {% for r in restaurants %}
+        var latlong = new google.maps.LatLng({{r.current_location.x}}, {{r.current_location.y}});
+        var marker = new google.maps.Marker({
+            position: latlong,
+            map: map,
+            title: "{{r.name}}"
+            });
+    {% endfor %}
+  }
+
+</script>
+</head>
+<body onload="initialize()">
+  <div id="map_canvas" style="width:100%; height:100%"></div>
+</body>
+</html>

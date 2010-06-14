@@ -13,6 +13,13 @@ class Restaurant(models.Model):
     def latest_update(self):
         return self.updates.latest()
 
+    @property
+    def current_location(self):
+        if not hasattr(self, '_current_location'):
+            self._current_location = self.updates.latest().location
+        return self._current_location
+
+
 class Update(models.Model):
     restaurant = models.ForeignKey(Restaurant, related_name='updates')
     update = models.CharField(max_length=200)
@@ -22,3 +29,6 @@ class Update(models.Model):
     twitter_status_id = models.IntegerField("Twitter Status ID", max_length=20, blank=False) # useful for ensuring we get only fresh updates when we query
 
     objects = models.GeoManager()
+
+    class Meta:
+        get_latest_by='timestamp'
