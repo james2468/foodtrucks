@@ -1,0 +1,142 @@
+[
+ {
+  "pk": 1, 
+  "model": "foodtrucks.restaurant", 
+  "fields": {
+   "website": "http://elfloridanodc.com/", 
+   "base_location": null, 
+   "name": "El Floridano", 
+   "twitter_id": "FLmeetsDC"
+  }
+ }, 
+ {
+  "pk": 2, 
+  "model": "foodtrucks.restaurant", 
+  "fields": {
+   "website": "http://www.sweetgreen.com/", 
+   "base_location": null, 
+   "name": "Sweetflow Mobile", 
+   "twitter_id": "SweetflowMobile"
+  }
+ }, 
+ {
+  "pk": 3, 
+  "model": "foodtrucks.restaurant", 
+  "fields": {
+   "website": "http://www.fojol.com/", 
+   "base_location": null, 
+   "name": "Fojol Bros.", 
+   "twitter_id": "fojolbros"
+  }
+ }, 
+ {
+  "pk": 4, 
+  "model": "foodtrucks.restaurant", 
+  "fields": {
+   "website": "http://www.ontheflydc.com/", 
+   "base_location": null, 
+   "name": "on the fly dc", 
+   "twitter_id": "OnTheFlyDC"
+  }
+ }, 
+ {
+  "pk": 5, 
+  "model": "foodtrucks.restaurant", 
+  "fields": {
+   "website": "http://pupatella.com/", 
+   "base_location": null, 
+   "name": "Pupatella Pizza", 
+   "twitter_id": "PupatellaPizza"
+  }
+ }, 
+ {
+  "pk": 6, 
+  "model": "foodtrucks.restaurant", 
+  "fields": {
+   "website": "http://www.curbsidecupcakes.com/", 
+   "base_location": null, 
+   "name": "Curbside Cupcakes", 
+   "twitter_id": "CurbsideCupcakes"
+  }
+ }, 
+ {
+  "pk": 7, 
+  "model": "foodtrucks.restaurant", 
+  "fields": {
+   "website": "http://districttaco.com/", 
+   "base_location": null, 
+   "name": "District Taco", 
+   "twitter_id": "districttaco"
+  }
+ }, 
+ {
+  "pk": 8, 
+  "model": "foodtrucks.restaurant", 
+  "fields": {
+   "website": "http://blog.eatsauca.com/", 
+   "base_location": null, 
+   "name": "s\u00e2u\u00e7\u00e1", 
+   "twitter_id": "EatSauca"
+  }
+ }, 
+ {
+  "pk": 10, 
+  "model": "foodtrucks.restaurant", 
+  "fields": {
+   "website": "http://www.choupi.com/", 
+   "base_location": null, 
+   "name": "Choupi", 
+   "twitter_id": "choupicrepes"
+  }
+ }, 
+ {
+  "pk": 11, 
+  "model": "foodtrucks.restaurant", 
+  "fields": {
+   "website": "http://www.dcslices.com/", 
+   "base_location": null, 
+   "name": "DC Slices", 
+   "twitter_id": "dcslices"
+  }
+ }, 
+ {
+  "pk": 14, 
+  "model": "foodtrucks.restaurant", 
+  "fields": {
+   "website": "http://www.foodchaindc.com/", 
+   "base_location": null, 
+   "name": "Food Chain", 
+   "twitter_id": "FoodChainDC"
+  }
+ }, 
+ {
+  "pk": 15, 
+  "model": "foodtrucks.restaurant", 
+  "fields": {
+   "website": "", 
+   "base_location": null, 
+   "name": "Spy City Diner", 
+   "twitter_id": "SpyCityDiner"
+  }
+ }, 
+ {
+  "pk": 17, 
+  "model": "foodtrucks.restaurant", 
+  "fields": {
+   "website": "http://pedroandvinnys.com/", 
+   "base_location": null, 
+   "name": "Pedro and Vinny's Burritos", 
+   "twitter_id": "pedroandvinnys"
+  }
+ }, 
+ {
+  "pk": 18, 
+  "model": "foodtrucks.restaurant", 
+  "fields": {
+   "website": "http://www.rebelheroes.com/", 
+   "base_location": null, 
+   "name": "Rebel Heroes", 
+   "twitter_id": "rebelheroes"
+  }
+ }
+]

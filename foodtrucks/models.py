@@ -5,7 +5,7 @@ from django.contrib.gis.db import models
 class Restaurant(models.Model):
     name = models.CharField(max_length=100)
     base_location = models.PointField(null=True)
-    website = models.URLField()
+    website = models.URLField(blank=True)
     twitter_id = models.CharField(max_length=30)
 
     objects = models.GeoManager()
