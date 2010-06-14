@@ -24,9 +24,7 @@ def geocode(location):
             lon,lat = pmark['Point']['coordinates'][0:2]
             return Point(lat, lon)
         else:
-            print resp
             return None
     except Exception, e:
-        print e
         return None
 

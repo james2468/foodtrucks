@@ -1,7 +1,7 @@
 [
  {
   "pk": 1, 
-  "model": "foodtrucks.restaurant", 
+  "model": "ftruck.restaurant", 
   "fields": {
    "website": "http://elfloridanodc.com/", 
    "base_location": null, 
@@ -11,7 +11,7 @@
  }, 
  {
   "pk": 2, 
-  "model": "foodtrucks.restaurant", 
+  "model": "ftruck.restaurant", 
   "fields": {
    "website": "http://www.sweetgreen.com/", 
    "base_location": null, 
@@ -21,7 +21,7 @@
  }, 
  {
   "pk": 3, 
-  "model": "foodtrucks.restaurant", 
+  "model": "ftruck.restaurant", 
   "fields": {
    "website": "http://www.fojol.com/", 
    "base_location": null, 
@@ -31,7 +31,7 @@
  }, 
  {
   "pk": 4, 
-  "model": "foodtrucks.restaurant", 
+  "model": "ftruck.restaurant", 
   "fields": {
    "website": "http://www.ontheflydc.com/", 
    "base_location": null, 
@@ -41,7 +41,7 @@
  }, 
  {
   "pk": 5, 
-  "model": "foodtrucks.restaurant", 
+  "model": "ftruck.restaurant", 
   "fields": {
    "website": "http://pupatella.com/", 
    "base_location": null, 
@@ -51,7 +51,7 @@
  }, 
  {
   "pk": 6, 
-  "model": "foodtrucks.restaurant", 
+  "model": "ftruck.restaurant", 
   "fields": {
    "website": "http://www.curbsidecupcakes.com/", 
    "base_location": null, 
@@ -61,7 +61,7 @@
  }, 
  {
   "pk": 7, 
-  "model": "foodtrucks.restaurant", 
+  "model": "ftruck.restaurant", 
   "fields": {
    "website": "http://districttaco.com/", 
    "base_location": null, 
@@ -71,7 +71,7 @@
  }, 
  {
   "pk": 8, 
-  "model": "foodtrucks.restaurant", 
+  "model": "ftruck.restaurant", 
   "fields": {
    "website": "http://blog.eatsauca.com/", 
    "base_location": null, 
@@ -81,7 +81,7 @@
  }, 
  {
   "pk": 10, 
-  "model": "foodtrucks.restaurant", 
+  "model": "ftruck.restaurant", 
   "fields": {
    "website": "http://www.choupi.com/", 
    "base_location": null, 
@@ -91,7 +91,7 @@
  }, 
  {
   "pk": 11, 
-  "model": "foodtrucks.restaurant", 
+  "model": "ftruck.restaurant", 
   "fields": {
    "website": "http://www.dcslices.com/", 
    "base_location": null, 
@@ -101,7 +101,7 @@
  }, 
  {
   "pk": 14, 
-  "model": "foodtrucks.restaurant", 
+  "model": "ftruck.restaurant", 
   "fields": {
    "website": "http://www.foodchaindc.com/", 
    "base_location": null, 
@@ -111,7 +111,7 @@
  }, 
  {
   "pk": 15, 
-  "model": "foodtrucks.restaurant", 
+  "model": "ftruck.restaurant", 
   "fields": {
    "website": "", 
    "base_location": null, 
@@ -121,7 +121,7 @@
  }, 
  {
   "pk": 17, 
-  "model": "foodtrucks.restaurant", 
+  "model": "ftruck.restaurant", 
   "fields": {
    "website": "http://pedroandvinnys.com/", 
    "base_location": null, 
@@ -131,7 +131,7 @@
  }, 
  {
   "pk": 18, 
-  "model": "foodtrucks.restaurant", 
+  "model": "ftruck.restaurant", 
   "fields": {
    "website": "http://www.rebelheroes.com/", 
    "base_location": null, 
