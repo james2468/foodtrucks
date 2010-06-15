@@ -1,2 +1,3 @@
 local_settings.py
 *.pyc
+ftruck/.oauth_token
