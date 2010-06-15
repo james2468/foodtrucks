@@ -6,6 +6,7 @@ import sys
 transformations = {
     re.compile(r'l\'?enfant', re.I): lambda complete, extracted: len(extracted.strip())>0 and extracted + " S.W." or "L'Enfant Plaza Metro",
     re.compile(r'mcpherson', re.I): lambda complete, extracted: len(extracted.strip())>0 and extracted + " N.W." or "McPherson Square",
+    re.compile(r'ballston', re.I): lambda complete, extracted: len(extracted.strip())==0 and "Ballston Metro" or extracted,
     re.compile(r'tomorrow', re.I): lambda complete, extracted: "",
 }
 
@@ -22,6 +23,7 @@ exp = re.compile(address, re.I)
 exp_reverse = re.compile(address_reverse, re.I)
 
 def extract(line):
+    # TODO: remove hardcoded 'washington, dc' suffix from upstream function
     
     match = exp.search(line)
     reverse_match = None

@@ -22,5 +22,8 @@ def extraction():
     
     >>> extract("McPherson Square, we're here on the corner of 15th & I. We're parked by an awning (sp) so you can stay dry! Come... http://bit.ly/cEFBCN")
     '15th & I N.W.'
+    
+    >>> extract("Hey rebels, we're back at #ballston for dinner until 7 at our old spot in front of the church and metro on fairfax and stafford. #fb")
+    'Ballston Metro'
     """
     pass
