@@ -26,6 +26,7 @@ class Restaurant(models.Model):
         r.name = json['name']
         r.website = json['url']
         r.twitter_id = json['id']
+        r.avatar = json['profile_image_url']
         
         r.save()
         
