@@ -1,0 +1,11 @@
+<html>
+<head>
+</head>
+<body>
+<ul>
+{% for u in updates %}
+    <li> {{ u.restaurant.name }}: {{ u.update }}
+{% endfor %}    
+</ul>
+</body>
+</html>
