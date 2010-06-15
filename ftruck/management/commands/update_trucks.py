@@ -9,6 +9,8 @@ from settings import *
 from ftruck.models import Restaurant, Update
 from ftruck.utils import geocode
 from ftruck import get_twitter_settings
+from ftruck import address
+
 
 def get_twitter_api_wrapper():
     token_filename = TWITTER.get('oauth_filename', 'ftruck/.oauth_token')
@@ -47,6 +49,9 @@ class Command(NoArgsCommand):
         since = Update.objects.aggregate(Max('twitter_status_id'))['twitter_status_id__max']
         
         for status in get_new_statuses(since_id=since):
-            update = Update.from_json(status)
-            update.save()
-       
+            u = Update.create_from_json(status)
+            
+            streets = address.extract(u.update)
+            if streets:
+                u.location = geocode(streets + ' Washington, DC')
+            u.save()
