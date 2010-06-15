@@ -6,6 +6,7 @@
    "website": "http://elfloridanodc.com/", 
    "base_location": null, 
    "name": "El Floridano", 
+   "avatar": "http://a3.twimg.com/profile_images/853426921/el_floridano_final_logo1_bigger.jpg",
    "twitter_id": "FLmeetsDC"
   }
  }, 
@@ -16,6 +17,7 @@
    "website": "http://www.sweetgreen.com/", 
    "base_location": null, 
    "name": "Sweetflow Mobile", 
+   "avatar": "http://a3.twimg.com/profile_images/493072763/truck_bigger.jpg",
    "twitter_id": "SweetflowMobile"
   }
  }, 
@@ -26,6 +28,7 @@
    "website": "http://www.fojol.com/", 
    "base_location": null, 
    "name": "Fojol Bros.", 
+   "avatar": "http://a1.twimg.com/profile_images/136164190/3215944423_bc9cff5f6a_m_bigger.jpg",
    "twitter_id": "fojolbros"
   }
  }, 
@@ -36,6 +39,7 @@
    "website": "http://www.ontheflydc.com/", 
    "base_location": null, 
    "name": "on the fly dc", 
+   "avatar": "http://a3.twimg.com/profile_images/251655187/IMG_0147_bigger.jpg",
    "twitter_id": "OnTheFlyDC"
   }
  }, 
@@ -46,6 +50,7 @@
    "website": "http://pupatella.com/", 
    "base_location": null, 
    "name": "Pupatella Pizza", 
+   "avatar": "http://a3.twimg.com/profile_images/720104777/DSC05314_bigger.jpg",
    "twitter_id": "PupatellaPizza"
   }
  }, 
@@ -56,7 +61,8 @@
    "website": "http://www.curbsidecupcakes.com/", 
    "base_location": null, 
    "name": "Curbside Cupcakes", 
-   "twitter_id": "CurbsideCupcakes"
+   "avatar": "http://a1.twimg.com/profile_images/420116896/cupcake_logo_bigger.JPG",
+   "twitter_id": "CurbsideCupcake"
   }
  }, 
  {
@@ -66,6 +72,7 @@
    "website": "http://districttaco.com/", 
    "base_location": null, 
    "name": "District Taco", 
+   "avatar": "http://a1.twimg.com/profile_images/344884756/districttaco_logo_bigger.jpg",
    "twitter_id": "districttaco"
   }
  }, 
@@ -75,7 +82,8 @@
   "fields": {
    "website": "http://blog.eatsauca.com/", 
    "base_location": null, 
-   "name": "s\u00e2u\u00e7\u00e1", 
+   "name": "sauca",
+   "avatar": "http://a1.twimg.com/profile_images/537272086/s_u__-icon-logo_bigger.jpg",
    "twitter_id": "EatSauca"
   }
  }, 
@@ -86,6 +94,7 @@
    "website": "http://www.choupi.com/", 
    "base_location": null, 
    "name": "Choupi", 
+   "avatar": "http://a1.twimg.com/profile_images/497340208/CHOUPI_bigger.jpg",
    "twitter_id": "choupicrepes"
   }
  }, 
@@ -96,6 +105,7 @@
    "website": "http://www.dcslices.com/", 
    "base_location": null, 
    "name": "DC Slices", 
+   "avatar": "http://a3.twimg.com/profile_images/650047025/dcslices-type_bigger.jpg",
    "twitter_id": "dcslices"
   }
  }, 
@@ -106,6 +116,7 @@
    "website": "http://www.foodchaindc.com/", 
    "base_location": null, 
    "name": "Food Chain", 
+   "avatar": "http://a3.twimg.com/profile_images/677550999/square_cart_invisible_background_bigger.jpg",
    "twitter_id": "FoodChainDC"
   }
  }, 
@@ -116,6 +127,7 @@
    "website": "", 
    "base_location": null, 
    "name": "Spy City Diner", 
+   "avatar": "http://a1.twimg.com/profile_images/337733008/Spy_City_Diner_4_bigger.jpg",
    "twitter_id": "SpyCityDiner"
   }
  }, 
@@ -126,6 +138,7 @@
    "website": "http://pedroandvinnys.com/", 
    "base_location": null, 
    "name": "Pedro and Vinny's Burritos", 
+   "avatar": "http://a1.twimg.com/profile_images/518183752/Pedrosm2_bigger.JPG",
    "twitter_id": "pedroandvinnys"
   }
  }, 
@@ -136,6 +149,7 @@
    "website": "http://www.rebelheroes.com/", 
    "base_location": null, 
    "name": "Rebel Heroes", 
+   "avatar": "http://a3.twimg.com/profile_images/697884483/RH_logo_square_bigger.jpg",
    "twitter_id": "rebelheroes"
   }
  }

@@ -8,6 +8,7 @@ class Restaurant(models.Model):
     base_location = models.PointField(null=True)
     website = models.URLField(blank=True)
     twitter_id = models.CharField(max_length=30)
+    avatar = models.URLField()
 
     objects = models.GeoManager()
 

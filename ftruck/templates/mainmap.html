@@ -13,13 +13,21 @@
     var map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 
     // add a marker
-    {% for r in restaurants %}
-        var latlong = new google.maps.LatLng({{r.current_location.x}}, {{r.current_location.y}});
-        var marker = new google.maps.Marker({
-            position: latlong,
-            map: map,
-            title: "{{r.name}}"
-            });
+    {% for r in trucks %}
+        var anon = function() {
+            var marker = new google.maps.Marker({
+                map: map,
+                position: new google.maps.LatLng({{r.location.x}}, {{r.location.y}}),
+                //icon: new google.maps.MarkerImage("{{r.avatar}}", new google.maps.Size(30, 30)),
+                title: "{{r.name}}"
+                });
+
+            google.maps.event.addListener(marker, 'click', function() {
+                var infowindow = new google.maps.InfoWindow({ content:
+                        "<b>{{r.name}}</b><br> {{r.update}}" });
+                infowindow.open(map, marker);
+                });
+        }();
     {% endfor %}
   }
 
