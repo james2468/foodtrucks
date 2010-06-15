@@ -4,6 +4,8 @@ from ftruck.models import Restaurant
 def mainmap(request):
     """ render a map with the current location of trucks """
 
+    updates = [r.updates.latest() for r in Restaurant.objects.all()]
+
     retval = []
     for r in Restaurant.objects.all():
         update = r.latest_geocoded_update()
@@ -14,13 +16,4 @@ def mainmap(request):
                            'website': r.website,
                            'location': update.location})
 
-    return render_to_response('mainmap.html', {'trucks':retval})
-
-
-def tweets(request):
-    """ render a list of the latest tweets from today """
-    updates = [r.updates.latest() for r in Restaurant.objects.all()]
-    
-    return render_to_response('tweets.html',
-                               {'updates': updates})
-
+    return render_to_response('main.html', {'trucks':retval, 'updates': updates})
