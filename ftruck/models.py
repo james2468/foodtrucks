@@ -12,14 +12,12 @@ class Restaurant(models.Model):
 
     objects = models.GeoManager()
 
-    def latest_update(self):
-        return self.updates.latest()
+    def latest_geocoded_update(self):
+        for update in self.updates.order_by('-timestamp'):
+            if update.location:
+                return update
+        return None
 
-    @property
-    def current_location(self):
-        if not hasattr(self, '_current_location'):
-            self._current_location = self.updates.latest().location
-        return self._current_location
         
     @staticmethod
     def create_from_json(json):
