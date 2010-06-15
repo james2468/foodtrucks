@@ -1,39 +1,43 @@
+import os, urllib2
 from django.core.management.base import NoArgsCommand
 from django.db.models import Max
 
+# various things stolen from Mike Verdone's excellent Twitter wrapper <http://mike.verdone.ca/twitter/>
+from ftruck.api import Twitter 
+from ftruck.oauth import *
+from settings import *
 from ftruck.models import Restaurant, Update
 from ftruck.utils import geocode
+from ftruck import get_twitter_settings
 
-# various things stolen from Mike Verdone's excellent Twitter wrapper <http://mike.verdone.ca/twitter/>
+def get_twitter_api_wrapper():
+    token_filename = TWITTER.get('oauth_filename', 'ftruck/.oauth_token')
+    if not os.path.exists(token_filename):
+        raise Exception("No OAuth token found at %s. Please run the 'oauth_dance' command first." % token_filename)
 
-import urllib2
+    TS = get_twitter_settings()
 
-def _py26OrGreater():
-    import sys
-    return sys.hexversion > 0x20600f0
-
-if _py26OrGreater():
-    import json
-else:
-    import simplejson as json
-
-def get_new_statuses(user='sbma44', list_name='dc-food-carts', since_id=None):
-    if since_id is not None:
-        since_id = "&since_id=%d" % since_id
-        
-    url = 'http://api.twitter.com/1/%s/lists/%s/statuses.json?per_page=200%s' % (user, list_name, since_id)
-    req = urllib2.Request(url)
-
-    try:
-        handle = urllib2.urlopen(req)
-        return json.loads(handle.read())
-    except urllib2.HTTPError, e:
-        if (e.code == 304):
-            return []
-        else:
-            raise e
+    (token, token_secret) = read_token_file(token_filename)    
+    api = Twitter(auth=OAuth(token=token, token_secret=token_secret, consumer_key=TS['consumer_key'], consumer_secret=TS['consumer_secret']), domain='api.twitter.com', api_version='1')
+    return api
 
 
+def get_new_statuses(user=None, list_name=None, since_id=None):
+    
+    TS = get_twitter_settings()
+    if user is None:
+        user = TS['user_name']
+    if list_name is None:
+        list_name = TS['list_name']
+    
+    api = get_twitter_api_wrapper()
+
+    if since_id is None:        
+        statuses = getattr(getattr(api, user).lists, list_name).statuses()
+    else:
+        statuses = getattr(getattr(api, user).lists, list_name).statuses(since_id=since_id)
+
+    return statuses
 
 
 class Command(NoArgsCommand):

@@ -75,7 +75,9 @@ TWITTER = {
     'app_name': 'DC Lunch',
     'consumer_key': '',
     'consumer_secret': '',
-    'oauth_filename': 'ftruck/.oauth_token'
+    'oauth_filename': 'ftruck/.oauth_token',
+    'user_name': 'sbma44',
+    'list_name': 'dc-food-carts'
 }
 
 try:
