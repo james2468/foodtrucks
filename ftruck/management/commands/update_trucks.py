@@ -43,6 +43,5 @@ class Command(NoArgsCommand):
         since = Update.objects.aggregate(Max('twitter_status_id'))['twitter_status_id__max']
         
         for status in get_new_statuses(since_id=since):
-            update = Update.from_json(status)
-            update.save()
-       
+            Update.create_from_json(status)
+            
