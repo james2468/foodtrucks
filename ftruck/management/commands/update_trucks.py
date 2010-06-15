@@ -3,6 +3,7 @@ from django.db.models import Max
 
 from ftruck.models import Restaurant, Update
 from ftruck.utils import geocode
+from ftruck import address
 
 # various things stolen from Mike Verdone's excellent Twitter wrapper <http://mike.verdone.ca/twitter/>
 
@@ -43,5 +44,9 @@ class Command(NoArgsCommand):
         since = Update.objects.aggregate(Max('twitter_status_id'))['twitter_status_id__max']
         
         for status in get_new_statuses(since_id=since):
-            Update.create_from_json(status)
+            u = Update.create_from_json(status)
             
+            streets = address.extract(u.update)
+            if streets:
+                u.location = geocode(streets + ' Washington, DC')
+            u.save()
