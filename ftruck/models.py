@@ -1,4 +1,4 @@
-import datetime
+from datetime import datetime, timedelta
 
 from django.contrib.gis.db import models
 import address
@@ -39,7 +39,7 @@ class Update(models.Model):
     update = models.CharField(max_length=200)
     url = models.URLField()
     location = models.PointField(null=True)
-    timestamp = models.DateTimeField(default=datetime.datetime.now)
+    timestamp = models.DateTimeField(default=datetime.now)
 
     objects = models.GeoManager()
     
@@ -53,7 +53,8 @@ class Update(models.Model):
     def create_from_json(json):
         u = Update()
         u.update = json['text']
-        #u.timestamp = json['created_at']
+        # just subtract 4 hours from UTC...time zones are extremely complicated to do correctly
+        u.timestamp = datetime.strptime(json['created_at'], "%a %b %d %H:%M:%S +0000 %Y") - timedelta(hours=4)
         u.twitter_status_id = json['id']
         
         try:
