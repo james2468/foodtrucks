@@ -70,6 +70,14 @@ INSTALLED_APPS = (
     'ftruck',
 )
 
+# Your local_settings.py should supply the actual settings necessary for this...
+TWITTER = {
+    'app_name': 'DC Lunch',
+    'consumer_key': '',
+    'consumer_secret': '',
+    'oauth_filename': 'ftruck/.oauth_token'
+}
+
 try:
     from local_settings import *
 except ImportError:
